@@ -9,6 +9,11 @@ function App() {
   const containerRef = useRef(null)
   const canvasRef = useRef(null)
 
+
+  const logoImage = "src/assets/SutiExpenseEdit.png"
+  const playBadge = "src/assets/PlayBadge.png"
+  const appleBadge = "src/assets/AppleBadge.png"
+
   useEffect(() => {
     if (!canvasRef.current) return
 
@@ -158,8 +163,8 @@ function App() {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <img src={playBadge} className="h-9 w-30 mr-1" alt="Get it on Google Play" />
-                  <img src={appleBadge} className="h-9 w-30 ml-1" alt="Download on the App Store" />
+                  <a href="https://play.google.com/store/apps/details?id=com.sutisoft.SutiExpense&hl=en_US" target="_blank"><img src={playBadge} className="h-9 w-30 mr-1 cursor-pointer" alt="Get it on Google Play" /></a>
+                  <a href="https://apps.apple.com/us/app/sutiexpense/id562877498" target="_blank"><img src={appleBadge} className="h-9 w-30 ml-1 cursor-pointer" alt="Download on the App Store" /></a>
                 </div>
               </div>
 
@@ -209,8 +214,8 @@ function App() {
 
           {/* Desktop badges */}
           <div className="hidden sm:flex justify-center items-center py-1">
-            <img src={playBadge} className="h-13 w-40 mr-1" alt="Get it on Google Play" />
-            <img src={appleBadge} className="h-14 w-40 ml-1" alt="Download on the App Store" />
+            <a href="https://play.google.com/store/apps/details?id=com.sutisoft.SutiExpense&hl=en_US" target="_blank"><img src={playBadge} className="h-13 w-40 mr-1 cursor-pointer" alt="Get it on Google Play" /></a>
+            <a href="https://apps.apple.com/us/app/sutiexpense/id562877498" target="_blank"><img src={appleBadge} className="h-14 w-40 ml-1 cursor-pointer" alt="Download on the App Store" /></a>
           </div>
         </div>
 
@@ -275,18 +280,15 @@ function App() {
 
         <div className="infoContainer">
           <h2>How can I ensure timely reimbursement?</h2>
-          <p>
-            To help ensure your expenses are processed quickly, please submit receipts by the 12th of each month or at least 3 days before month-end
-          </p>
+          <p>Expenses will be reimbursed on the 7th and the 22nd as a separate deposit from payroll.</p>
+          <p>To help ensure your expenses are processed quickly, please submit receipts by the 12th of each month or at least 3 days before month-end</p>
         </div>
 
         <div id="deadlines" className="scroll-m-20 infoContainer">
           <h2>When do we have to fully transition to SutiExpense?</h2>
-
-          <p>Beginning July 1, we strongly encourage all employees to download SutiExpense, begin collecting photos of receipts and start submitting expense reports through the app.</p>
-          <p>We understand that transitioning from a paper process to a digital platform takes time to adjust,</p>
-          <p>so a two-month grace period will be in place where both Suti and paper expense reports will be accepted (submit one or the other, not both).</p>
-
+          <p>Beginning July 1, we strongly encourage all employees to download SutiExpense, begin collecting photos of receipts and start submitting expense reports through the app. </p>
+          <br />
+          <p>We understand that transitioning from a paper process to a digital platform takes time to adjust, so a two-month grace period will be in place where both Suti and paper expense reports will be accepted (submit one or the other, not both).</p>
           <br />
 
           <p>
@@ -297,23 +299,21 @@ function App() {
 
         <div id="rules" className="scroll-m-20 infoContainer">
           <h2>Are there rules or guidelines I need to follow?</h2>
-
-          <p>
-            Yes. SutiExpense follows Marquette&apos;s expense reimbursement policies. Please review them here:{' '}
-            <a className="textLink" href="ok">
-              Insert Policy Link
-            </a>
-          </p>
-
+          <p>Yes. SutiExpense follows Marquette's expense reimbursement policies. Please review them here: <a className="textLink" target="_blank" href="src/assets/HR15 - Travel Expense Policy (2-2025).pdf">Expense Reimbursement Policy</a></p>
           <p>A few key reminders:</p>
 
           <ul>
             <li>Expenses must be reported and receipts must be submitted within 60 days of the expense date</li>
             <li>Mileage only paid in the River Division</li>
             <li>No mileage payment if LT 50 miles</li>
-            <li>Cooks and Deck roles are capped at a $200 reimbursement limit</li>
-            <li>No mileage cap for wheelhouse or engineering personnel</li>
-            <li>Receipts required for all expenses except mileage</li>
+            <li>Cooks and Deck roles are capped at a $200 mileage reimbursement limit</li>
+            <li>No mileage cap for wheelhouse or engineering personnel. 
+              <ul>
+                <li className="list-[circle]"> You cannot claim both mileage and gas. </li>
+                <li className="list-[circle]">If using a rental car, only gas receipts will be approved.</li>
+              </ul>
+            </li>
+            <li>Itemized receipts required for all expenses except mileage</li>
             <li>No alcohol</li>
           </ul>
         </div>
