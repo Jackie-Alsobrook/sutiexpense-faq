@@ -216,8 +216,8 @@ function App() {
 
         {/* <FIXME></FIXME> */}
         <div className="scroll-m-20 infoContainer !text-center">
-            <h2>What is SutiExpense?</h2>
-            <p>Suti Expense is used to capture receipts, create expense reports, 
+            <h2>What is SutiExpense used for?</h2>
+            <p>SutiExpense is used to capture receipts, create expense reports, 
               submit expenses and mileage for approval, track reimbursement status,
                and manage travel-related expenses.</p>
         </div>
@@ -254,15 +254,29 @@ function App() {
         </h1>
 
 
-        <div className="infoContainer" style={{ width: '90%', alignSelf: 'center' }}>
-          <h2>How do I complete an expense report?</h2>
-          <p>To begin:</p>
-          <ol className="font-bold">
-            <li>Create a new report</li>
-            <li>Enter the details of the report</li>
-            <li>Add expenses and receipts</li>
-            <li>Submit for approval when ready</li>
-          </ol>
+        <div className="infoContainer text-center" style={{ width: '90%', alignSelf: 'center' }}>
+          <h2>How do I submit an expense report?</h2>
+          <div className="flex flex-col md:flex-row gap-4 w-[90%] mx-auto text-center mt-2">
+            <div style={{ width: '90%', alignSelf: 'center' }}>
+              <p>To create and submit an expense report: </p>
+              <ol className="font-bold list-none! ml-0!">
+                <li>Create a new report</li>
+                <li>Enter the details of the report</li>
+                <li>Add expenses and receipts</li>
+                <li>Submit for approval when ready</li>
+              </ol>
+            </div>
+            <div style={{ width: '90%', alignSelf: 'center' }}>
+              <p>To create and submit a mileage expense report:</p>
+              <ol className="items-center font-bold list-none! ml-0!">
+                <li>Create a new report</li>
+                <li>Enter trip details</li>
+                <li>Submit for approval when ready</li>
+              </ol>
+            </div>
+          </div>
+          
+          <br />
           <p>Step-by-step training is available through your assigned eLearnings.</p>
 
           <p>
